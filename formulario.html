@@ -64,6 +64,12 @@
                 if($("#email").val().trim().length == 0){
                     mensaje = "El email esta en blanco"
                 };
+                if ($("#contra1").val() != $("#contra2").val()) {
+                    mensaje = mensaje + "Las contraseñas deben ser iguales";
+                }
+                if ($("#contra1").val().trim().length == 0) {
+                    mensaje = mensaje + "La contraseña esta en blanco";
+                }
 
                 if(mensaje != ""){
                     $("#error").html(mensaje);
